@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { LANG, MODE } from './Utils/Constants'
 import { ThemeProvider } from 'styled-components'
 import { themes } from './Utils/theme'
@@ -55,12 +55,14 @@ function App() {
 		<ThemeProvider theme={themes[theme]}>
 			<AppWrapper>
 				<Router>
-					<Navigation lang={lang} theme={theme} allRefs={allRefs} toggleLanguage={handleLang} toggleTheme={handleTheme} />
-					<IntroScreen ref={introRef} lang={lang} />
-					<AboutScreen ref={aboutRef} lang={lang} />
-					<ProjectScreen ref={projectRef} lang={lang} />
-					<ContactScreen ref={contactRef} lang={lang} />
-					<Footer lang={lang} />
+					<Route path='*'>
+						<Navigation lang={lang} theme={theme} allRefs={allRefs} toggleLanguage={handleLang} toggleTheme={handleTheme} />
+						<IntroScreen ref={introRef} lang={lang} />
+						<AboutScreen ref={aboutRef} lang={lang} />
+						<ProjectScreen ref={projectRef} lang={lang} />
+						<ContactScreen ref={contactRef} lang={lang} />
+						<Footer lang={lang} />
+					</Route>
 				</Router>
 			</AppWrapper>
 		</ThemeProvider>
