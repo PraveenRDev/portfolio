@@ -73,7 +73,7 @@ export const PROJECTS = [
 		],
 		LINK: {
 			NAME: 'Frontend Repo',
-			URL: 'https://github.com/PraveenRDev/SociallyDev-API',
+			URL: 'https://github.com/PraveenRDev/SociallyDev-WEB',
 		},
 		LINK_2: {
 			NAME: 'Backend Repo',
