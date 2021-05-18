@@ -96,7 +96,7 @@ export const PROJECTS = [
 		},
 		LINK_2: {
 			NAME: 'Visit Website',
-			URL: 'https://radiant-lowlands-34471.herokuapp.com/Pages/home.php',
+			URL: 'https://chopperforcefive.herokuapp.com/',
 		},
 	},
 	{
