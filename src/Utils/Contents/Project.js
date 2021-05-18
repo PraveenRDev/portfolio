@@ -113,7 +113,7 @@ export const PROJECTS = [
 		},
 		LINK_2: {
 			NAME: 'Visit Website',
-			URL: '#',
+			URL: 'https://clickandpick.herokuapp.com/',
 		},
 	},
 	{

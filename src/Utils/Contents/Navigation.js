@@ -16,7 +16,7 @@ export const NAV_ITEMS = {
 export const SETTINGS = {
 	LANGUAGE: {
 		english: 'French',
-		french: 'English',
+		french: 'Anglais',
 	},
 	MODE: {
 		english: {
