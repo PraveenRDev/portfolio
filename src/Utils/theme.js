@@ -64,11 +64,12 @@ const lightTheme = {
 
 const darkTheme = {
 	...options,
+	dark: '#1F2632',
 	mode: 'dark',
-	pageColor: '#293241',
+	pageColor: '#1F2632',
 	textColor: '#fcf6f5',
-	alternateTextColor: '#89abe3',
-	mid: '#3d5a80',
+	alternateTextColor: '#3F88C5',
+	mid: '#293241',
 }
 
 export const themes = {
