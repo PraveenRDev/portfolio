@@ -35,7 +35,7 @@ const Nav = styled.nav`
 		top: 0;
 	}
 	@media (min-width: ${DEVICES.LAPTOP}) {
-		justify-content: space-around;
+		justify-content: space-between;
 	}
 `
 const NavLinks = styled.div`
@@ -49,6 +49,7 @@ const NavLinks = styled.div`
 		letter-spacing: ${(props) => props.theme.spacing.xSmall};
 		:hover {
 			color: ${(props) => props.theme.primaryMix};
+			transition: all 0.2s ease-in;
 		}
 	}
 	font-size: ${(props) => props.theme.fontSize.nano};
@@ -178,6 +179,12 @@ const Navigation = function ({ lang, theme, allRefs, toggleLanguage, toggleTheme
 						{QUICK_LINKS[lang].RESUME}
 					</LinkWrapper>
 				</SpecialLink>
+
+				{/* <Settings>
+					<ion-icon name='settings'></ion-icon>
+					<ConfigButton onClick={toggleLanguage}>{SETTINGS.LANGUAGE[lang]}</ConfigButton>
+					<ConfigButton onClick={toggleTheme}>{theme === MODE.DARK ? SETTINGS.MODE[lang].DARK : SETTINGS.MODE[lang].LIGHT}</ConfigButton>
+				</Settings> */}
 			</NavLinks>
 		</Nav>
 	)

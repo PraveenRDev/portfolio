@@ -63,7 +63,6 @@ const AppWrapper = styled.main`
 	}
 	@media (min-width: ${DEVICES.TABLET}) {
 		margin-bottom: 0;
-		margin-top: 7vh;
 	}
 `
 

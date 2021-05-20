@@ -7,7 +7,7 @@ const FooterWrapper = styled.footer`
 	text-align: center;
 	padding: 1em;
 	background-color: ${(props) => (props.theme.mode === MODE.DARK ? props.theme.mid : props.theme.dark)};
-	color: ${(props) => (props.theme.mode === MODE.LIGHT ? props.theme.light : props.theme.black)};
+	color: ${(props) => props.theme.light};
 	font-size: ${(props) => props.theme.fontSize.xxSmall};
 	letter-spacing: ${(props) => props.theme.spacing.xSmall};
 	@media (min-width: ${DEVICES.PHONE}) {

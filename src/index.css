@@ -9,3 +9,11 @@
 body {
 	font-family: 'Roboto', sans-serif;
 }
+
+.switch-wrapper {
+	position: relative;
+}
+
+.switch-wrapper > div {
+	position: absolute;
+}

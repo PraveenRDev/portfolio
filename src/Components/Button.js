@@ -20,6 +20,7 @@ export const PrimaryLinkBtn = styled.a`
 	:hover {
 		background-color: ${(props) => props.theme.primaryMix};
 		color: ${(props) => props.theme.light};
+		transition: all 0.2s ease-in;
 	}
 	:active {
 		background-color: ${(props) => (props.theme.mode === MODE.LIGHT ? props.theme.dark : props.theme.light)};
@@ -52,6 +53,7 @@ export const LinkButton = styled.a`
 	}
 	:hover {
 		color: ${(props) => props.theme.primaryMix};
+		transition: all 0.2s ease-in;
 	}
 	:active {
 		color: ${(props) => (props.theme.mode === MODE.LIGHT ? props.theme.light : props.theme.dark)};
@@ -63,15 +65,15 @@ export const ConfigButton = styled.button`
 	font-family: inherit;
 	cursor: pointer;
 	min-width: 3em;
-	background-color: ${(props) => (props.theme.mode === MODE.LIGHT ? props.theme.dark : props.theme.mid)};
+	background-color: transparent;
 	color: ${(props) => props.theme.light};
 	margin-top: 0.2em;
 	font-size: ${(props) => props.theme.fontSize.nano};
-	padding: 0.3em 0.1em;
+	padding: 0.4em 0.1em;
 	border: 0.5px solid white;
 
 	@media (min-width: ${DEVICES.PHONE}) {
-		font-size: ${(props) => props.theme.fontSize.xxSmall};
+		font-size: ${(props) => props.theme.fontSize.xSmall};
 	}
 	@media (min-width: ${DEVICES.TABLET}) {
 		padding: 0.2em 0.7em;
@@ -92,5 +94,6 @@ export const SpecialLink = styled.a`
 	font-weight: ${(props) => props.theme.fontWeight.strong} !important;
 	:hover {
 		color: ${(props) => props.theme.primaryMix} !important;
+		transition: all 0.2s ease-in;
 	}
 `

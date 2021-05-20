@@ -36,6 +36,7 @@ const MainTitle = styled.h1`
 	cursor: pointer;
 	:hover {
 		color: ${(props) => props.theme.alternateTextColor};
+		transition: all 0.2s ease-in;
 	}
 	@media (min-width: ${DEVICES.TABLET}) {
 		font-size: ${(props) => props.theme.fontSize.large};
