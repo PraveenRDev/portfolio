@@ -26,18 +26,18 @@ const IntroTitle = styled.h2`
 	}
 `
 const MainTitle = styled.h1`
-	color: ${(props) => props.theme.mid};
+	color: ${(props) => props.theme.alternateTextColor};
 	font-size: ${(props) => props.theme.fontSize.small};
 	font-weight: ${(props) => props.theme.fontWeight.strong};
 	text-transform: uppercase;
 	letter-spacing: ${(props) => props.theme.spacing.large};
 	margin-bottom: 0.2em;
 	width: fit-content;
-	cursor: pointer;
-	:hover {
+	/* cursor: pointer; */
+	/* :hover {
 		color: ${(props) => props.theme.alternateTextColor};
 		transition: all 0.2s ease-in;
-	}
+	} */
 	@media (min-width: ${DEVICES.TABLET}) {
 		font-size: ${(props) => props.theme.fontSize.large};
 		letter-spacing: ${(props) => props.theme.spacing.large};
@@ -63,11 +63,11 @@ const SectionTitle = styled.h3`
 const SectionContent = styled.p`
 	font-weight: ${(props) => (props.theme.mode === MODE.DARK ? props.theme.fontWeight.light : props.theme.fontWeight.regular)};
 	color: ${(props) => props.theme.textColor};
-	font-size: ${(props) => props.theme.fontSize.xxSmall};
+	font-size: ${(props) => props.theme.fontSize.xSmall};
 	line-height: ${(props) => props.theme.lineHeight.regular};
 	letter-spacing: ${(props) => props.theme.spacing.small};
 	margin-top: 1em;
-	text-align: justify;
+	text-align: left;
 
 	@media (min-width: ${DEVICES.PHONE}) {
 		font-size: ${(props) => props.theme.fontSize.small};

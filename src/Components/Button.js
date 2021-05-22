@@ -4,7 +4,7 @@ import { DEVICES, MODE } from '../Utils/Constants'
 export const PrimaryLinkBtn = styled.a`
 	text-decoration: none;
 	text-align: center;
-	margin: ${(props) => (props.center ? '1em auto 0 auto' : '1em 0 0 0')};
+	margin: ${(props) => (props.center ? '1em auto 0 auto' : '1em 1em 0 0')};
 	display: block;
 	width: 100%;
 	text-transform: uppercase;
@@ -12,7 +12,7 @@ export const PrimaryLinkBtn = styled.a`
 	color: ${(props) => (props.outline && props.theme.mode === MODE.LIGHT ? props.theme.dark : props.theme.light)};
 	border: ${(props) => `2px solid ${props.theme.primaryColor}`};
 	background-color: ${(props) => (props.outline ? 'unset' : props.theme.primaryColor)};
-	padding: 0.6em 1em;
+	padding: 0.6em 1.2em;
 	font-size: ${(props) => props.theme.fontSize.xxSmall};
 	min-width: 6em;
 	/* max-width: 50%; */
@@ -71,7 +71,7 @@ export const ConfigButton = styled.button`
 	font-size: ${(props) => props.theme.fontSize.nano};
 	padding: 0.4em 0.1em;
 	border: 0.5px solid white;
-
+	text-transform: uppercase;
 	@media (min-width: ${DEVICES.PHONE}) {
 		font-size: ${(props) => props.theme.fontSize.xSmall};
 	}
@@ -86,6 +86,7 @@ export const ConfigButton = styled.button`
 	@media (min-width: ${DEVICES.LAPTOP}) {
 		max-width: 50%;
 		font-size: ${(props) => props.theme.fontSize.small};
+		letter-spacing: ${(props) => props.theme.spacing.large};
 	}
 `
 

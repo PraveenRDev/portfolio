@@ -12,24 +12,26 @@ const XPaddingContainer = styled.div`
 `
 
 const XPadContContainer = styled.div`
-	padding: 0 1em;
+	padding: 0 1.5em;
 	@media (min-width: ${DEVICES.OLD_PHONE}) {
-		padding: 0 2em;
-	}
-	@media (min-width: ${DEVICES.PHONE}) {
 		padding: 0 3em;
 	}
-	@media (min-width: ${DEVICES.TABLET}) {
+	@media (min-width: ${DEVICES.PHONE}) {
 		padding: 0 4em;
 	}
-	@media (min-width: ${DEVICES.LAPTOP}) {
-		padding: 0 5em;
+	@media (min-width: ${DEVICES.TABLET}) {
+		padding: 0 6em;
 	}
-	@media (min-width: ${DEVICES.LARGE_SCREEN}) {
+	@media (min-width: ${DEVICES.LAPTOP}) {
 		padding: 0 10em;
 	}
+	@media (min-width: ${DEVICES.LARGE_SCREEN}) {
+		padding: 0 12em;
+	}
 	@media (min-width: ${DEVICES.BIG_SCREEN}) {
-		padding: 0 25em;
+		padding: 0 30em;
+		max-width: 120em;
+		margin: 0 auto;
 	}
 `
 

@@ -37,7 +37,7 @@ const lineHeight = {
 }
 
 const colors = {
-	dark: '#293241',
+	dark: '#1F2632',
 	light: '#fcf6f5',
 	primaryColor: '#ff3864',
 	primaryMix: '#DA0049',
@@ -59,16 +59,15 @@ const lightTheme = {
 	pageColor: '#fcf6f5',
 	textColor: '#293241',
 	alternateTextColor: '#3d5a80',
-	mid: '#89abe3',
+	mid: '#293241',
 }
 
 const darkTheme = {
 	...options,
-	dark: '#1F2632',
 	mode: 'dark',
 	pageColor: '#1F2632',
 	textColor: '#fcf6f5',
-	alternateTextColor: '#3F88C5',
+	alternateTextColor: '#64a6bd',
 	mid: '#293241',
 }
 

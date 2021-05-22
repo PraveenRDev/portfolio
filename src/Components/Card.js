@@ -20,13 +20,13 @@ export const FeaturedCard = styled.div`
 		width: 100%;
 	} */
 	@media (min-width: ${DEVICES.LAPTOP}) {
-		width: 80%;
+		width: 90%;
 	}
 `
 
 export const Card = styled.div`
 	background-color: ${(props) => (props.theme.mode === MODE.DARK ? props.theme.mid : props.theme.white)};
-	margin: 1em auto 0 auto;
+	margin: 2em auto 0 auto;
 	width: 100%;
 	@media (min-width: ${DEVICES.OLD_PHONE}) {
 	}
@@ -38,7 +38,7 @@ export const Card = styled.div`
 		/* width: 35%; */
 	}
 	@media (min-width: ${DEVICES.LAPTOP}) {
-		width: 80%;
+		width: 90%;
 	}
 `
 
@@ -87,12 +87,13 @@ export const CardDescription = styled.p`
 	color: ${(props) => props.theme.textColor};
 	font-size: ${(props) => props.theme.fontSize.xxSmall};
 	text-align: left;
+	line-height: ${(props) => props.theme.lineHeight.regular};
+
 	@media (min-width: ${DEVICES.PHONE}) {
 		font-size: ${(props) => props.theme.fontSize.small};
 	}
 	@media (min-width: ${DEVICES.TABLET}) {
 		font-size: ${(props) => props.theme.fontSize.medium};
-		line-height: ${(props) => props.theme.lineHeight.regular};
 	}
 `
 export const CardSubTitle = styled(CardTitle)`

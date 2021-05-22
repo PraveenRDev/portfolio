@@ -17,7 +17,7 @@ const Nav = styled.nav`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color: ${(props) => (props.theme.mode === MODE.DARK ? props.theme.mid : props.theme.dark)};
+	background-color: ${(props) => props.theme.mid};
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 	width: 100%;
 	z-index: 1000;

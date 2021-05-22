@@ -17,8 +17,8 @@ const IntroSection = styled.section`
 			props.theme.mode === MODE.LIGHT
 				? `linear-gradient(
 		90deg,
-		rgba(0, 0, 0, 0.2),
-		rgba(0, 0, 0, 0.1)
+		rgba(255, 255, 255, 0.3),
+		rgba(255, 255, 255, 0.2)
 	),
 	url(${skyhigh})`
 				: `linear-gradient(

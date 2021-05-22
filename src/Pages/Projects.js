@@ -24,7 +24,7 @@ const Project = function ({ title, image, subTitle, description, techs, link1, l
 		<Card>
 			<CardContent>
 				<CardTitle>{title}</CardTitle>
-				<CardImage src={image} alt={`screenshot of ${title}`} />
+				<CardImage src={image} alt={`screenshot of ${title}`} loading='lazy' />
 				<CardDescription>{description}</CardDescription>
 				<CardSubTitle>{subTitle}</CardSubTitle>
 				{techs.map((tech, i) => (
@@ -58,8 +58,7 @@ const ProjectScreen = forwardRef(({ lang }, ref) => {
 							<Tag key={i} name={tech} />
 						))}
 					</CardContent>
-					<CardFooter>
-						<LinkButton>Show Login Credentials</LinkButton>
+					<CardFooter isOneLink={true}>
 						<LinkButton href={FEATURED_PROJECT.LINK} target='_blank'>
 							Visit Website
 						</LinkButton>
