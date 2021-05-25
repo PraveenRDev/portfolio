@@ -3,6 +3,8 @@ import ChooperForce from '../../Assets/Images/ChooperForce.png'
 import ClickAndPick from '../../Assets/Images/ClickAndPick.png'
 import WMW from '../../Assets/Images/WMW.png'
 import Mindfulness from '../../Assets/Images/Mindfulness.png'
+import AnyStats from '../../Assets/Images/AnyStats.png'
+import HM from '../../Assets/Images/HM.png'
 
 export const TITLE = {
 	english: 'Projects',
@@ -20,15 +22,16 @@ export const FEATURED_PROJECT = {
 	},
 	DESCRIPTION: {
 		english:
-			'Leafwire is recognized as the largest online cannabis business connectivity platform by FORBES. With over 50,000 users, It allows users to make connections, read and post information/news in real-time, find investors or companies, job boards, the marketplace, events, training and learning, and many other features. I was part of all the features of the application from its initial release in 2018 to 2020.',
+			'Leafwire is recognized as the largest online cannabis business connectivity platform by FORBES. With over 50,000 users, I was part of developing various features such as connections, real-time newsfeed, advanced search, 3rd-party integrated job board, subscription-based marketplace, geo-location-based events, training, and learning.',
 		french:
-			"Leafwire est reconnue comme la plus grande plateforme de connectivité commerciale du cannabis en ligne par FORBES. Avec plus de 50000 utilisateurs, il permet aux utilisateurs de se connecter, de lire et de publier des informations / actualités en temps réel, de trouver des investisseurs ou des entreprises, des sites d'emploi, le marché, des événements, des formations et des apprentissages, et de nombreuses autres fonctionnalités. J'ai fait partie de toutes les fonctionnalités de l'application de sa sortie initiale en 2018 à 2020.",
+			"Leafwire est reconnue comme la plus grande plateforme de connectivité commerciale du cannabis en ligne par FORBES. Avec plus de 50000 utilisateurs, j'ai participé au développement de diverses fonctionnalités telles que les connexions, le fil d'actualité en temps réel, la recherche avancée, le tableau des offres d'emploi intégré tiers, le marché basé sur les abonnements, les événements basés sur la géolocalisation, la formation et l'apprentissage.",
 	},
 	TECHNOLOGIES: [
 		'Micro-services with Node',
 		'Express',
 		'Micro-frontends with React',
 		'Redux',
+		'Agile',
 		'Analytics',
 		'Redis',
 		'Bluesnap',
@@ -43,6 +46,7 @@ export const FEATURED_PROJECT = {
 		'PostMan',
 		'BitBucket',
 		'Jira',
+		'Slack',
 	],
 	LINK: 'https://www.leafwire.com',
 }
@@ -85,9 +89,9 @@ export const PROJECTS = [
 		IMAGE: ChooperForce,
 		DESCRIPTION: {
 			english:
-				'A multi-functional application that can track and manage data with the ability to generate pre-formatted reports at the click of a button. This application will enable mid-level management to generate snap-shot reports with critical information depicting the current strengths and weaknesses of the organization',
+				'A multi-functional application(Group Project) that can track and manage data with the ability to generate pre-formatted reports at the click of a button. This application will enable mid-level management to generate snap-shot reports with critical information depicting the current strengths and weaknesses of the organization.',
 			french:
-				"Une application multifonctionnelle qui peut suivre et gérer les données avec la possibilité de générer des rapports pré-formatés en un clic. Cette application permettra à la direction de niveau intermédiaire de générer instantanément des rapports instantanés composés d'informations critiques décrivant les forces et faiblesses actuelles de l'organisation.",
+				"Une application multifonctionnelle(Projet de groupe) qui peut suivre et gérer les données avec la possibilité de générer des rapports pré-formatés en un clic. Cette application permettra à la direction de niveau intermédiaire de générer des rapports instantanés contenant des informations critiques décrivant les forces et les faiblesses actuelles de l'organisation.",
 		},
 		TECHNOLOGIES: ['PHP', 'HTML', 'SQL', 'Bootstrap', 'JS'],
 		LINK: {
@@ -100,11 +104,32 @@ export const PROJECTS = [
 		},
 	},
 	{
+		TITLE: 'AnyStats',
+		IMAGE: AnyStats,
+		DESCRIPTION: {
+			english:
+				'The app allows users to create any kind of two-dimensional data statistics and they will be represented in chosen charts. Users can share the statistics with the public or keep them private. The App followed MVC architecture with entity framework and it received a 100/100.',
+			french:
+				"L'application permet aux utilisateurs de créer tout type de statistiques de données bidimensionnelles et elles seront représentées dans des graphiques choisis. Les utilisateurs peuvent partager les statistiques avec le public ou les garder privées. L'application a suivi l'architecture MVC avec le cadre d'entité et a reçu un 100/100.",
+		},
+		TECHNOLOGIES: ['.NET', 'ChartJS', 'MVC', 'Entity Framework', 'Bootstrap'],
+		LINK: {
+			NAME: 'GitHub Repo',
+			URL: 'https://github.com/PraveenRDev/AnyStats-5204_PassionProject-n01442097',
+		},
+		LINK_2: {
+			NAME: 'Presentation/Demo',
+			URL: 'https://youtu.be/pkdv9tPjSH8',
+		},
+	},
+	{
 		TITLE: 'Click & Pick',
 		IMAGE: ClickAndPick,
 		DESCRIPTION: {
-			english: 'eCommerce platform with MERN stack. Shopping cart, Payments, Reviews, and a full-fledged admin panel.',
-			french: "Plateforme de commerce électronique avec pile MERN. Panier, paiements, avis et un panneau d'administration à part entière.",
+			english:
+				'Completed an online course on building an eCommerce platform with MERN stack. Shopping cart, Payments, Reviews, and a full-fledged admin panel.',
+			french:
+				"A terminé un cours en ligne sur la création d'une plateforme de commerce électronique avec la pile MERN Panier, paiements, avis et un panneau d'administration à part entière.",
 		},
 		TECHNOLOGIES: ['React With Hooks', 'Redux', 'Node With Express', 'Mongo', 'PayPal', 'DB Seed Script', 'NPM', 'Git'],
 		LINK: {
@@ -152,6 +177,25 @@ export const PROJECTS = [
 		LINK_2: {
 			NAME: 'Visit Website',
 			URL: 'http://dev.thinkoutside.breathebubble.s3-website.us-east-2.amazonaws.com/',
+		},
+	},
+	{
+		TITLE: 'Javascript Game',
+		IMAGE: HM,
+		DESCRIPTION: {
+			english:
+				'During my first semester, I created this game inspired by the traditional hangman game to teach arrays in an interesting way to my fellow students. The game received extremely positive feedback from both students and professors.',
+			french:
+				"Au cours de mon premier semestre, j'ai créé ce jeu inspiré du jeu du pendu traditionnel pour enseigner les tableaux de manière intéressante à mes camarades. Le jeu a reçu des commentaires extrêmement positifs de la part des étudiants et des professeurs.",
+		},
+		TECHNOLOGIES: ['JS', 'HTML', 'CSS'],
+		LINK: {
+			NAME: 'GitHub Repo',
+			URL: 'https://github.com/PraveenRDev/arrayGame',
+		},
+		LINK_2: {
+			NAME: 'Play Game',
+			URL: 'http://com.hangman.arrays.s3-website-us-east-1.amazonaws.com/',
 		},
 	},
 ]

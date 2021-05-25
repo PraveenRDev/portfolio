@@ -43,6 +43,7 @@ const colors = {
 	primaryMix: '#DA0049',
 	white: '#fff',
 	black: '#000',
+	alt: '#3d5a80',
 }
 
 const options = {

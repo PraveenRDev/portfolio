@@ -26,18 +26,13 @@ const IntroTitle = styled.h2`
 	}
 `
 const MainTitle = styled.h1`
-	color: ${(props) => props.theme.alternateTextColor};
+	color: ${(props) => props.theme.alt};
 	font-size: ${(props) => props.theme.fontSize.small};
 	font-weight: ${(props) => props.theme.fontWeight.strong};
 	text-transform: uppercase;
 	letter-spacing: ${(props) => props.theme.spacing.large};
 	margin-bottom: 0.2em;
 	width: fit-content;
-	/* cursor: pointer; */
-	/* :hover {
-		color: ${(props) => props.theme.alternateTextColor};
-		transition: all 0.2s ease-in;
-	} */
 	@media (min-width: ${DEVICES.TABLET}) {
 		font-size: ${(props) => props.theme.fontSize.large};
 		letter-spacing: ${(props) => props.theme.spacing.large};

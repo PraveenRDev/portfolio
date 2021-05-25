@@ -17,7 +17,7 @@ const AboutScreen = forwardRef(({ lang }, ref) => {
 				<SectionContent>{INTRO[lang]}</SectionContent>
 				<SectionContent>{BACKGROUND[lang]}</SectionContent>
 				<SectionContent>{CONCLUSION[lang]}</SectionContent>
-				<PrimaryLinkBtn center={true} href={lang === LANG.EN ? Resume : Resume_FR} target='_blank' download>
+				<PrimaryLinkBtn center={true} href={lang === LANG.EN ? Resume : Resume_FR} target='_blank' rel='noreferrer' download>
 					{RESUME[lang]}
 				</PrimaryLinkBtn>
 			</XPadContContainer>

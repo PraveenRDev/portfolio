@@ -24,7 +24,7 @@ const Project = function ({ title, image, subTitle, description, techs, link1, l
 		<Card>
 			<CardContent>
 				<CardTitle>{title}</CardTitle>
-				<CardImage src={image} alt={`screenshot of ${title}`} loading='lazy' />
+				<CardImage src={image} alt={`screenshot of ${title}`} loading='lazy' onClick={() => window.open(link2.URL)} />
 				<CardDescription>{description}</CardDescription>
 				<CardSubTitle>{subTitle}</CardSubTitle>
 				{techs.map((tech, i) => (
@@ -32,10 +32,10 @@ const Project = function ({ title, image, subTitle, description, techs, link1, l
 				))}
 			</CardContent>
 			<CardFooter>
-				<LinkButton href={link1.URL} target='_blank'>
+				<LinkButton rel='noreferrer' href={link1.URL} target='_blank'>
 					{link1.NAME}
 				</LinkButton>
-				<LinkButton href={link2.URL} target='_blank'>
+				<LinkButton rel='noreferrer' href={link2.URL} target='_blank'>
 					{link2.NAME}
 				</LinkButton>
 			</CardFooter>
@@ -51,7 +51,7 @@ const ProjectScreen = forwardRef(({ lang }, ref) => {
 				<FeaturedCard>
 					<CardContent>
 						<CardTitle>{FEATURED_PROJECT.TITLE[lang]}</CardTitle>
-						<CardImage src={Leafwire} alt={`screenshot of ${FEATURED_PROJECT.TITLE[lang]}`} />
+						<CardImage src={Leafwire} alt={`screenshot of ${FEATURED_PROJECT.TITLE[lang]}`} onClick={() => window.open(FEATURED_PROJECT.LINK)} />
 						<CardDescription>{FEATURED_PROJECT.DESCRIPTION[lang]}</CardDescription>
 						<CardSubTitle>{SUB_TITLE[lang]}</CardSubTitle>
 						{FEATURED_PROJECT.TECHNOLOGIES.map((tech, i) => (
@@ -59,7 +59,7 @@ const ProjectScreen = forwardRef(({ lang }, ref) => {
 						))}
 					</CardContent>
 					<CardFooter isOneLink={true}>
-						<LinkButton href={FEATURED_PROJECT.LINK} target='_blank'>
+						<LinkButton href={FEATURED_PROJECT.LINK} target='_blank' rel='noreferrer'>
 							Visit Website
 						</LinkButton>
 					</CardFooter>

@@ -4,7 +4,7 @@ export const TITLE = {
 }
 
 export const OUTRO = {
-	english: `I’d love to bring my expertise and enthusiasm to your development team and appreciate the opportunity to contribute to your company’s ongoing growth and continued success. If that all sounds about right, Feel free to reach out through the below platforms.`,
+	english: `I’d love to bring my expertise and enthusiasm to your development team and appreciate the opportunity to contribute to your company’s ongoing growth and continued success. Feel free to reach out through the below platforms.`,
 	french:
 		"J'adorerais apporter mon expertise et mon enthousiasme à votre équipe de développement et apprécier l'opportunité de contribuer à la croissance continue de votre entreprise et à son succès continu. Si tout cela vous semble correct, n'hésitez pas à contacter les plates-formes ci-dessous.",
 }

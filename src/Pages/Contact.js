@@ -32,7 +32,7 @@ const ContactScreen = forwardRef(({ lang }, ref) => {
 				<SectionTitle>{TITLE[lang]}</SectionTitle>
 				<SectionContent>{OUTRO[lang]}</SectionContent>
 				<ContactWrapper>
-					<PrimaryLinkBtn outline={true} target='_blank' href={LINKED_IN}>
+					<PrimaryLinkBtn outline={true} target='_blank' rel='noreferrer' href={LINKED_IN}>
 						LinkedIn
 					</PrimaryLinkBtn>
 					<PrimaryLinkBtn href={EMAIL.URL}>{EMAIL.NAME[lang]}</PrimaryLinkBtn>
