@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Link, useLocation } from 'react-router-dom'
 import { DEVICES, LANG, MODE, NAV_PAGES } from '../Utils/Constants'
 import { NAV_ITEMS, QUICK_LINKS, SETTINGS } from '../Utils/Contents/Navigation'
-import { ConfigButton, SpecialLink } from './Button'
+import { ConfigButton, NavLinks, NavLink } from './Button'
 import Resume from '../Assets/Files/Resume Praveen Ramkumar.pdf'
 import Resume_FR from '../Assets/Files/Resume Praveen Ramkumar_French.pdf'
 import Code from '../Assets/Images/icons/code-slash.svg'
@@ -21,14 +21,11 @@ const Nav = styled.nav`
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 	width: 100%;
 	z-index: 1000;
-	height: 7vh;
+	height: 9vh;
 	bottom: 0;
 	left: 0;
-	@media (min-width: ${DEVICES.OLD_PHONE}) {
-		height: 8vh;
-	}
-	@media (min-width: ${DEVICES.PHONE}) {
-		height: 7vh;
+	a {
+		text-decoration: none;
 	}
 	@media (min-width: ${DEVICES.TABLET}) {
 		justify-content: space-between;
@@ -38,59 +35,6 @@ const Nav = styled.nav`
 		justify-content: space-between;
 	}
 `
-const NavLinks = styled.div`
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	& a {
-		text-decoration: none;
-		color: ${(props) => props.theme.light};
-		font-size: ${(props) => props.theme.fontSize.small};
-		letter-spacing: ${(props) => props.theme.spacing.xSmall};
-		:hover {
-			color: ${(props) => props.theme.primaryMix};
-			transition: all 0.2s ease-in;
-		}
-	}
-	font-size: ${(props) => props.theme.fontSize.nano};
-	width: 80%;
-
-	@media (min-width: ${DEVICES.OLD_PHONE}) {
-		width: 80%;
-	}
-
-	@media (min-width: ${DEVICES.PHONE}) {
-		font-size: ${(props) => props.theme.fontSize.micro};
-		width: 76%;
-	}
-	@media (min-width: ${DEVICES.TABLET}) {
-		font-size: ${(props) => props.theme.fontSize.small};
-		width: 75%;
-	}
-	@media (min-width: ${DEVICES.LAPTOP}) {
-		font-size: ${(props) => props.theme.fontSize.small};
-		width: 60%;
-	}
-	@media (min-width: ${DEVICES.LARGE_SCREEN}) {
-		width: 50%;
-	}
-	@media (min-width: ${DEVICES.BIG_SCREEN}) {
-		width: 40%;
-	}
-`
-
-const NavLink = styled.span`
-	text-decoration: none;
-	font-size: ${(props) => props.theme.fontSize.small};
-	letter-spacing: ${(props) => props.theme.spacing.xSmall};
-	color: ${(props) => (props.special ? props.theme.primaryColor : props.current ? props.theme.primaryMix : props.theme.light)};
-	font-weight: ${(props) => (props.special ? props.theme.fontWeight.strong : props.theme.fontWeight.regular)};
-	:hover {
-		color: ${(props) => props.theme.primaryMix};
-		transition: all 0.2s ease-in;
-	}
-`
-
 const Settings = styled.div`
 	display: flex;
 	width: 20%;
@@ -191,12 +135,12 @@ const Navigation = function ({ lang, theme, allRefs, toggleLanguage, toggleTheme
 					</LinkWrapper>
 				</Link>
 
-				<SpecialLink href={lang === LANG.EN ? Resume : Resume_FR} target='_blank' download>
+				<Link className='link' to={lang === LANG.EN ? Resume : Resume_FR} target='_blank' download>
 					<LinkWrapper>
 						<Icon src={Download} alt={`Icon of ${Download}`}></Icon>
 						<NavLink special={true}>{QUICK_LINKS[lang].RESUME}</NavLink>
 					</LinkWrapper>
-				</SpecialLink>
+				</Link>
 			</NavLinks>
 		</Nav>
 	)

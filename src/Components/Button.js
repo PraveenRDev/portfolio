@@ -94,11 +94,46 @@ export const ConfigButton = styled.button`
 	}
 `
 
-export const SpecialLink = styled.a`
-	color: ${(props) => props.theme.primaryColor} !important;
-	font-weight: ${(props) => props.theme.fontWeight.strong} !important;
+export const NavLinks = styled.div`
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-size: ${(props) => props.theme.fontSize.nano};
+	width: 80%;
+
+	@media (min-width: ${DEVICES.OLD_PHONE}) {
+		width: 80%;
+	}
+
+	@media (min-width: ${DEVICES.PHONE}) {
+		font-size: ${(props) => props.theme.fontSize.micro};
+		width: 76%;
+	}
+	@media (min-width: ${DEVICES.TABLET}) {
+		font-size: ${(props) => props.theme.fontSize.small};
+		width: 75%;
+	}
+	@media (min-width: ${DEVICES.LAPTOP}) {
+		font-size: ${(props) => props.theme.fontSize.small};
+		width: 60%;
+	}
+	@media (min-width: ${DEVICES.LARGE_SCREEN}) {
+		width: 50%;
+	}
+	@media (min-width: ${DEVICES.BIG_SCREEN}) {
+		width: 40%;
+	}
+`
+
+export const NavLink = styled.span`
+	text-decoration: none;
+	border: unset;
+	font-size: ${(props) => props.theme.fontSize.small};
+	letter-spacing: ${(props) => props.theme.spacing.xSmall};
+	color: ${(props) => (props.special ? props.theme.primaryColor : props.current ? props.theme.primaryMix : props.theme.light)};
+	font-weight: ${(props) => (props.special ? props.theme.fontWeight.strong : props.theme.fontWeight.regular)};
 	:hover {
-		color: ${(props) => props.theme.primaryMix} !important;
+		color: ${(props) => props.theme.primaryMix};
 		transition: all 0.2s ease-in;
 	}
 `
