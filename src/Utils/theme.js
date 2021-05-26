@@ -9,7 +9,8 @@ const fontSize = {
 	regular: '1.6em',
 	large: '1.8em',
 	xlarge: '2.2em',
-	xxLarge: '3.2em',
+	xxLarge: '2.8em',
+	big: '3.2em',
 }
 
 const fontWeight = {

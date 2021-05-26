@@ -68,4 +68,21 @@ const AppWrapper = styled.main`
 	}
 `
 
-export { XPaddingContainer, XPadContContainer, YMarginContainer, AppWrapper }
+const NameAndSlogan = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+`
+
+const NameContainer = styled.div`
+	margin-bottom: 8px;
+	@media (min-width: ${DEVICES.TABLET}) {
+		margin-bottom: 15px;
+	}
+	@media (min-width: ${DEVICES.LAPTOP}) {
+		margin-bottom: 25px;
+	}
+`
+
+export { XPaddingContainer, XPadContContainer, YMarginContainer, AppWrapper, NameAndSlogan, NameContainer }

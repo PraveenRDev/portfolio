@@ -25,6 +25,65 @@ const IntroTitle = styled.h2`
 		font-size: ${(props) => props.theme.fontSize.xxLarge};
 	}
 `
+
+const NameTitle = styled.h1`
+	text-transform: uppercase;
+	font-size: ${(props) => props.theme.fontSize.small};
+	color: ${(props) => props.theme.alt};
+	letter-spacing: ${(props) => props.theme.spacing.regular};
+
+	@media (min-width: ${DEVICES.OLD_PHONE}) {
+		font-size: ${(props) => props.theme.fontSize.mid};
+	}
+	@media (min-width: ${DEVICES.PHONE}) {
+		font-size: ${(props) => props.theme.fontSize.regular};
+	}
+	@media (min-width: ${DEVICES.TABLET}) {
+		font-size: ${(props) => props.theme.fontSize.xlarge};
+		letter-spacing: ${(props) => props.theme.spacing.large};
+	}
+	@media (min-width: ${DEVICES.LAPTOP}) {
+		font-size: ${(props) => props.theme.fontSize.xxLarge};
+	}
+	@media (min-width: ${DEVICES.LARGE_SCREEN}) {
+		font-size: ${(props) => props.theme.fontSize.big};
+	}
+`
+
+const JobTitle = styled.h2`
+	font-weight: 300;
+	letter-spacing: ${(props) => props.theme.spacing.xSmall};
+`
+const Slogan = styled.h2`
+	font-weight: 300;
+	color: ${(props) => props.theme.light};
+	font-size: ${(props) => props.theme.fontSize.xxSmall};
+	background-color: ${(props) => props.theme.mid};
+	padding: 0.8em 0.3em;
+	max-width: 35em;
+	text-transform: uppercase;
+	border-radius: 0.25em;
+	line-height: ${(props) => props.theme.lineHeight.regular};
+	opacity: ${(props) => (props.theme.mode === MODE.LIGHT ? 0.95 : 0.85)};
+	@media (min-width: ${DEVICES.OLD_PHONE}) {
+		font-size: ${(props) => props.theme.fontSize.xSmall};
+	}
+	@media (min-width: ${DEVICES.PHONE}) {
+		font-size: ${(props) => props.theme.fontSize.small};
+	}
+	@media (min-width: ${DEVICES.TABLET}) {
+		padding: 0.8em 0.5em;
+		font-size: ${(props) => props.theme.fontSize.large};
+		letter-spacing: ${(props) => props.theme.spacing.large};
+	}
+	@media (min-width: ${DEVICES.LAPTOP}) {
+		font-size: ${(props) => props.theme.fontSize.xlarge};
+	}
+	@media (min-width: ${DEVICES.LARGE_SCREEN}) {
+		font-size: ${(props) => props.theme.fontSize.xxLarge};
+	}
+`
+
 const MainTitle = styled.h1`
 	color: ${(props) => props.theme.alt};
 	font-size: ${(props) => props.theme.fontSize.small};
@@ -73,4 +132,4 @@ const SectionContent = styled.p`
 	}
 `
 
-export { IntroTitle, MainTitle, SectionTitle, SectionContent }
+export { IntroTitle, MainTitle, SectionTitle, SectionContent, NameTitle, JobTitle, Slogan }

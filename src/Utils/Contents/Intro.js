@@ -1,6 +1,9 @@
-const INTRO_CONTENT = {
-	english: 'Elevate Your Business With Enterprise Standard Web Applications',
-	french: "Élevez votre entreprise avec les applications Web standard d'entreprise",
+export const NAME = {
+	english: 'Praveen R - Developer',
+	french: 'Praveen R - Développeur',
 }
 
-export default INTRO_CONTENT
+export const INTRO_CONTENT = {
+	english: "Let's Elevate Your Business With Enterprise Standard Web Applications",
+	french: "Élevons votre entreprise avec les applications Web standard d'entreprise",
+}
