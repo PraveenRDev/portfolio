@@ -17,6 +17,9 @@ export const FeaturedCard = styled.div`
 export const Card = styled.div`
 	background-color: ${(props) => (props.theme.mode === MODE.DARK ? props.theme.mid : props.theme.white)};
 	margin: 2em auto 2em auto;
+	:last-child {
+		margin-bottom: 0;
+	}
 	width: 100%;
 	@media (min-width: ${DEVICES.OLD_PHONE}) {
 	}
