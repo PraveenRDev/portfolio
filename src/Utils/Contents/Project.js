@@ -204,9 +204,9 @@ export const PROJECTS = [
 		IMAGE: TO,
 		DESCRIPTION: {
 			english:
-				'A fully responsive portfolio site that allows instantaneous theme and language customization. The theme and components of the site are custom-built and responsive, No CSS frameworks used. The site scores are extremely high in Lighthouse performance tests. Hosted through AWS utilizing multiple services to cater the best performance at the lowest possible cost.',
+				'Site allows instantaneous theme and language customization. Custom-built responsive components, No CSS frameworks. Site scores are extremely high in Lighthouse tests. Hosted through AWS to provide the best performance at the lowest cost.',
 			french:
-				"Un site de portfolio entièrement réactif qui permet une personnalisation instantanée du thème et de la langue. Le thème et les composants du site sont personnalisés et réactifs, aucun framework CSS n'est utilisé. Les scores du site sont extrêmement élevés dans les tests de performance Lighthouse. Hébergé via AWS utilisant plusieurs services pour offrir les meilleures performances au coût le plus bas possible.",
+				'Le site permet une personnalisation instantanée du thème et de la langue. Composants réactifs personnalisés, pas de frameworks CSS. Les scores du site sont extrêmement élevés dans les tests Lighthouse. Hébergé via AWS pour fournir les meilleures performances au moindre coût.',
 		},
 		TECHNOLOGIES: ['React', 'Styled Components', 'S3', 'CloudFront', 'Route53', 'ACM'],
 		LINK: {
