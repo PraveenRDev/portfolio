@@ -172,11 +172,11 @@ export const PROJECTS = [
 		TECHNOLOGIES: ['HTML', 'CSS', 'JS'],
 		LINK: {
 			NAME: 'GitHub Repo',
-			URL: 'https://github.com/PraveenRDev/find_my_wine',
+			URL: 'https://github.com/PraveenRDev/Mindfulness',
 		},
 		LINK_2: {
 			NAME: 'Visit Website',
-			URL: 'http://dev.thinkoutside.breathebubble.s3-website.us-east-2.amazonaws.com/',
+			URL: 'http://mindfulness.thinkoutside.dev.s3-website.ca-central-1.amazonaws.com/',
 		},
 	},
 	{

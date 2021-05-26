@@ -80,7 +80,8 @@ export const CardDescription = styled.p`
 	color: ${(props) => props.theme.textColor};
 	font-size: ${(props) => props.theme.fontSize.xSmall};
 	text-align: left;
-	line-height: ${(props) => props.theme.lineHeight.regular};
+	line-height: ${(props) => props.theme.lineHeight.large};
+	letter-spacing: ${(props) => props.theme.spacing.xxSmall};
 
 	@media (min-width: ${DEVICES.PHONE}) {
 		font-size: ${(props) => props.theme.fontSize.small};
