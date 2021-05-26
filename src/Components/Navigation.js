@@ -30,6 +30,7 @@ const Nav = styled.nav`
 	@media (min-width: ${DEVICES.TABLET}) {
 		justify-content: space-between;
 		top: 0;
+		height: 7vh;
 	}
 	@media (min-width: ${DEVICES.LAPTOP}) {
 		justify-content: space-between;
