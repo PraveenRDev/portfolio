@@ -78,10 +78,10 @@ const NameAndSlogan = styled.div`
 const NameContainer = styled.div`
 	margin-bottom: 8px;
 	@media (min-width: ${DEVICES.TABLET}) {
-		margin-bottom: 15px;
+		margin-bottom: 12px;
 	}
 	@media (min-width: ${DEVICES.LAPTOP}) {
-		margin-bottom: 25px;
+		margin-bottom: 15px;
 	}
 `
 

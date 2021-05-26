@@ -1,6 +1,6 @@
 export const NAME = {
-	english: 'Praveen R - Developer',
-	french: 'Praveen R - Développeur',
+	english: 'Praveen R - Web Developer',
+	french: 'Praveen R - Développeur web',
 }
 
 export const INTRO_CONTENT = {

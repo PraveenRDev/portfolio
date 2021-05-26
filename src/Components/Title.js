@@ -27,6 +27,7 @@ const IntroTitle = styled.h2`
 `
 
 const NameTitle = styled.h1`
+	font-family: 'Roboto', sans-serif;
 	font-weight: ${(props) => props.theme.fontWeight.strong};
 	text-transform: uppercase;
 	font-size: ${(props) => props.theme.fontSize.small};
