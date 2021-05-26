@@ -72,6 +72,10 @@ export const ConfigButton = styled.button`
 	padding: 0.4em 0.1em;
 	border: 0.5px solid white;
 	text-transform: uppercase;
+	:hover {
+		font-weight: ${(props) => props.theme.fontWeight.strong};
+		transition: all 0.1s ease-in;
+	}
 	@media (min-width: ${DEVICES.PHONE}) {
 		font-size: ${(props) => props.theme.fontSize.xSmall};
 	}

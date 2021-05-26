@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { Link, useLocation } from 'react-router-dom'
 import { DEVICES, LANG, MODE, NAV_PAGES } from '../Utils/Constants'
@@ -78,6 +78,19 @@ const NavLinks = styled.div`
 		width: 40%;
 	}
 `
+
+const NavLink = styled.span`
+	text-decoration: none;
+	font-size: ${(props) => props.theme.fontSize.small};
+	letter-spacing: ${(props) => props.theme.spacing.xSmall};
+	color: ${(props) => (props.special ? props.theme.primaryColor : props.current ? props.theme.primaryMix : props.theme.light)};
+	font-weight: ${(props) => (props.special ? props.theme.fontWeight.strong : props.theme.fontWeight.regular)};
+	:hover {
+		color: ${(props) => props.theme.primaryMix};
+		transition: all 0.2s ease-in;
+	}
+`
+
 const Settings = styled.div`
 	display: flex;
 	width: 20%;
@@ -113,24 +126,29 @@ const Icon = styled.img`
 const Navigation = function ({ lang, theme, allRefs, toggleLanguage, toggleTheme }) {
 	let location = useLocation()
 	const { introRef, aboutRef, projectRef, contactRef } = allRefs
+	const [currentPage, setCurrentPage] = useState(null)
 
 	useEffect(() => {
 		if (location.pathname === NAV_PAGES.HOME) {
+			setCurrentPage(NAV_PAGES.HOME)
 			introRef.current.scrollIntoView({
 				behavior: 'smooth',
 				block: 'start',
 			})
 		} else if (location.pathname === NAV_PAGES.ABOUT) {
+			setCurrentPage(NAV_PAGES.ABOUT)
 			aboutRef.current.scrollIntoView({
 				behavior: 'smooth',
 				block: 'start',
 			})
 		} else if (location.pathname === NAV_PAGES.PROJECTS) {
+			setCurrentPage(NAV_PAGES.PROJECTS)
 			projectRef.current.scrollIntoView({
 				behavior: 'smooth',
 				block: 'start',
 			})
 		} else if (location.pathname === NAV_PAGES.CONTACT_ME) {
+			setCurrentPage(NAV_PAGES.CONTACT_ME)
 			contactRef.current.scrollIntoView({
 				behavior: 'smooth',
 				block: 'start',
@@ -148,43 +166,37 @@ const Navigation = function ({ lang, theme, allRefs, toggleLanguage, toggleTheme
 				<Link to={NAV_PAGES.HOME}>
 					<LinkWrapper>
 						<Icon src={Home} alt={`Icon of ${Home}`}></Icon>
-						{NAV_ITEMS[lang].HOME}
+						<NavLink>{NAV_ITEMS[lang].HOME}</NavLink>
 					</LinkWrapper>
 				</Link>
 
 				<Link to={NAV_PAGES.ABOUT}>
 					<LinkWrapper>
 						<Icon src={Person} alt={`Icon of ${Person}`}></Icon>
-						{NAV_ITEMS[lang].ABOUT}
+						<NavLink current={currentPage === NAV_PAGES.ABOUT}>{NAV_ITEMS[lang].ABOUT}</NavLink>
 					</LinkWrapper>
 				</Link>
 
 				<Link to={NAV_PAGES.PROJECTS}>
 					<LinkWrapper>
 						<Icon src={Code} alt={`Icon of ${Code}`}></Icon>
-						{NAV_ITEMS[lang].PROJECTS}
+						<NavLink current={currentPage === NAV_PAGES.PROJECTS}>{NAV_ITEMS[lang].PROJECTS}</NavLink>
 					</LinkWrapper>
 				</Link>
 
 				<Link to={NAV_PAGES.CONTACT_ME}>
 					<LinkWrapper>
 						<Icon src={Mail} alt={`Icon of ${Mail}`}></Icon>
-						{NAV_ITEMS[lang].CONTACT}
+						<NavLink current={currentPage === NAV_PAGES.CONTACT_ME}>{NAV_ITEMS[lang].CONTACT}</NavLink>
 					</LinkWrapper>
 				</Link>
 
 				<SpecialLink href={lang === LANG.EN ? Resume : Resume_FR} target='_blank' download>
 					<LinkWrapper>
 						<Icon src={Download} alt={`Icon of ${Download}`}></Icon>
-						{QUICK_LINKS[lang].RESUME}
+						<NavLink special={true}>{QUICK_LINKS[lang].RESUME}</NavLink>
 					</LinkWrapper>
 				</SpecialLink>
-
-				{/* <Settings>
-					<ion-icon name='settings'></ion-icon>
-					<ConfigButton onClick={toggleLanguage}>{SETTINGS.LANGUAGE[lang]}</ConfigButton>
-					<ConfigButton onClick={toggleTheme}>{theme === MODE.DARK ? SETTINGS.MODE[lang].DARK : SETTINGS.MODE[lang].LIGHT}</ConfigButton>
-				</Settings> */}
 			</NavLinks>
 		</Nav>
 	)

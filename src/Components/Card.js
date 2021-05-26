@@ -76,7 +76,7 @@ export const CardImage = styled.img`
 `
 
 export const CardDescription = styled.p`
-	margin-top: 0.5em;
+	margin-top: 1em;
 	color: ${(props) => props.theme.textColor};
 	font-size: ${(props) => props.theme.fontSize.xSmall};
 	text-align: left;
@@ -91,7 +91,7 @@ export const CardDescription = styled.p`
 	}
 `
 export const CardSubTitle = styled(CardTitle)`
-	margin: 0.5em 0;
+	margin: 0.8em 0;
 	color: ${(props) => props.theme.alternateTextColor};
 	font-size: ${(props) => props.theme.fontSize.xSmall};
 	letter-spacing: ${(props) => props.theme.spacing.xSmall};

@@ -5,6 +5,7 @@ import WMW from '../../Assets/Images/WMW.png'
 import Mindfulness from '../../Assets/Images/Mindfulness.png'
 import AnyStats from '../../Assets/Images/AnyStats.png'
 import HM from '../../Assets/Images/HM.png'
+import TO from '../../Assets/Images/TO.png'
 
 export const TITLE = {
 	english: 'Projects',
@@ -180,7 +181,7 @@ export const PROJECTS = [
 		},
 	},
 	{
-		TITLE: 'Javascript Game',
+		TITLE: 'Array Game',
 		IMAGE: HM,
 		DESCRIPTION: {
 			english:
@@ -196,6 +197,25 @@ export const PROJECTS = [
 		LINK_2: {
 			NAME: 'Play Game',
 			URL: 'http://com.hangman.arrays.s3-website-us-east-1.amazonaws.com/',
+		},
+	},
+	{
+		TITLE: 'Think Outside',
+		IMAGE: TO,
+		DESCRIPTION: {
+			english:
+				'A fully responsive portfolio site that allows instantaneous theme and language customization. The theme and components of the site are custom-built and responsive, No CSS frameworks used. The site scores are extremely high in Lighthouse performance tests. Hosted through AWS utilizing multiple services to cater the best performance at the lowest possible cost.',
+			french:
+				"Un site de portfolio entièrement réactif qui permet une personnalisation instantanée du thème et de la langue. Le thème et les composants du site sont personnalisés et réactifs, aucun framework CSS n'est utilisé. Les scores du site sont extrêmement élevés dans les tests de performance Lighthouse. Hébergé via AWS utilisant plusieurs services pour offrir les meilleures performances au coût le plus bas possible.",
+		},
+		TECHNOLOGIES: ['React', 'Styled Components', 'S3', 'CloudFront', 'Route53', 'ACM'],
+		LINK: {
+			NAME: 'GitHub Repo',
+			URL: 'https://github.com/PraveenRDev/portfolio',
+		},
+		LINK_2: {
+			NAME: 'Visit Website',
+			URL: 'https://www.thinkoutside.dev/',
 		},
 	},
 ]
