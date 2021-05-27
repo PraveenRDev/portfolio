@@ -74,16 +74,19 @@ export const ConfigButton = styled.button`
 		font-weight: ${(props) => props.theme.fontWeight.strong};
 		transition: all 0.1s ease-in;
 	}
+	font-size: ${(props) => props.theme.fontSize.xxSmall};
 	@media (min-width: ${DEVICES.TABLET}) {
 		padding: 0.2em 0.7em;
 		margin-left: 0.5em;
 		border: unset;
 		margin: unset;
 		padding: unset;
+		font-size: ${(props) => props.theme.fontSize.xSmall};
 	}
 	@media (min-width: ${DEVICES.LAPTOP}) {
 		max-width: 50%;
 		letter-spacing: ${(props) => props.theme.spacing.large};
+		font-size: ${(props) => props.theme.fontSize.xlSmall};
 	}
 `
 

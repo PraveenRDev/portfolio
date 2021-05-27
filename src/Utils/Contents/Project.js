@@ -158,7 +158,7 @@ export const PROJECTS = [
 		},
 		LINK_2: {
 			NAME: 'Visit Website',
-			URL: 'http://what-my-wine.s3-website.ca-central-1.amazonaws.com/',
+			URL: 'https://wmw.thinkoutside.dev/',
 		},
 	},
 	{
@@ -177,7 +177,7 @@ export const PROJECTS = [
 		},
 		LINK_2: {
 			NAME: 'Visit Website',
-			URL: 'http://mindfulness.thinkoutside.dev.s3-website.ca-central-1.amazonaws.com/',
+			URL: 'https://mindfulness.thinkoutside.dev/',
 		},
 	},
 	{
@@ -196,7 +196,7 @@ export const PROJECTS = [
 		},
 		LINK_2: {
 			NAME: 'Play Game',
-			URL: 'http://com.hangman.arrays.s3-website-us-east-1.amazonaws.com/',
+			URL: 'https://hangman.thinkoutside.dev/',
 		},
 	},
 	{
