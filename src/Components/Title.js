@@ -26,13 +26,13 @@ const IntroTitle = styled.h2`
 	}
 `
 
-const NameTitle = styled.h1`
+const NameTitle = styled.h2`
 	font-family: 'Roboto', sans-serif;
 	font-weight: ${(props) => props.theme.fontWeight.strong};
 	text-transform: uppercase;
 	font-size: ${(props) => props.theme.fontSize.small};
 	color: ${(props) => props.theme.alt};
-	letter-spacing: ${(props) => props.theme.spacing.regular};
+	letter-spacing: ${(props) => props.theme.spacing.xxSmall};
 
 	@media (min-width: ${DEVICES.OLD_PHONE}) {
 		font-size: ${(props) => props.theme.fontSize.mid};
@@ -42,7 +42,7 @@ const NameTitle = styled.h1`
 	}
 	@media (min-width: ${DEVICES.TABLET}) {
 		font-size: ${(props) => props.theme.fontSize.xlarge};
-		letter-spacing: ${(props) => props.theme.spacing.large};
+		letter-spacing: ${(props) => props.theme.spacing.xxSmall};
 	}
 	@media (min-width: ${DEVICES.LAPTOP}) {
 		font-size: ${(props) => props.theme.fontSize.xxLarge};
@@ -56,7 +56,7 @@ const JobTitle = styled.h2`
 	font-weight: 300;
 	letter-spacing: ${(props) => props.theme.spacing.xSmall};
 `
-const Slogan = styled.h2`
+const Slogan = styled.p`
 	font-weight: 300;
 	color: ${(props) => props.theme.light};
 	font-size: ${(props) => props.theme.fontSize.xxSmall};

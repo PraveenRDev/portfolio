@@ -96,13 +96,25 @@ const Logo = styled.h1`
 		color: ${(props) => props.theme.primaryMix};
 	}
 	@media (min-width: ${DEVICES.TABLET}) {
-		font-size: ${(props) => props.theme.fontSize.xSmall};
+		font-size: ${(props) => props.theme.fontSize.lSmall};
+		display: none;
 	}
 	@media (min-width: ${DEVICES.LAPTOP}) {
 		font-size: ${(props) => props.theme.fontSize.lSmall};
+		display: block;
 	}
 	@media (min-width: ${DEVICES.LARGE_SCREEN}) {
 		font-size: ${(props) => props.theme.fontSize.small};
+	}
+`
+
+const LogoSmall = styled(Logo)`
+	display: none;
+	@media (min-width: ${DEVICES.TABLET}) {
+		display: block;
+	}
+	@media (min-width: ${DEVICES.LAPTOP}) {
+		display: none;
 	}
 `
 
@@ -143,9 +155,8 @@ const Navigation = function ({ lang, theme, allRefs, toggleLanguage, toggleTheme
 		<Nav>
 			<LogoWrapper>
 				<Link to={NAV_PAGES.HOME}>
-					<Logo>
-						Think <br /> Outside
-					</Logo>
+					<Logo>Think Outside</Logo>
+					<LogoSmall>TO</LogoSmall>
 				</Link>
 			</LogoWrapper>
 			<NavLinks isSmall={lang === LANG.FR}>
