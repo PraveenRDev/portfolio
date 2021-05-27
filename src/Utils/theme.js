@@ -3,6 +3,8 @@ const fontSize = {
 	micro: '0.6em',
 	xxSmall: '0.7em',
 	xSmall: '0.8em',
+	xlSmall: '0.9em',
+	lSmall: '1em',
 	small: '1.1em',
 	mid: '1.2em',
 	medium: '1.4em',

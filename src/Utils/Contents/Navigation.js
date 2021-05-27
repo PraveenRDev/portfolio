@@ -3,13 +3,13 @@ export const NAV_ITEMS = {
 		HOME: 'Home',
 		ABOUT: 'About',
 		PROJECTS: 'Projects',
-		CONTACT: 'Contact Me',
+		CONTACT: 'Contact',
 	},
 	french: {
 		HOME: 'Domicile',
 		ABOUT: 'À propos',
 		PROJECTS: 'Projets',
-		CONTACT: 'Contactez moi',
+		CONTACT: 'Contactez',
 	},
 }
 

@@ -15,7 +15,7 @@ import Download from '../Assets/Images/icons/download.svg'
 const Nav = styled.nav`
 	position: fixed;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 	background-color: ${(props) => props.theme.mid};
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -28,25 +28,30 @@ const Nav = styled.nav`
 		text-decoration: none;
 	}
 	@media (min-width: ${DEVICES.TABLET}) {
-		justify-content: space-between;
+		justify-content: flex-end;
 		top: 0;
 		height: 7vh;
 	}
 	@media (min-width: ${DEVICES.LAPTOP}) {
-		justify-content: space-between;
+		justify-content: flex-end;
 	}
 `
 const Settings = styled.div`
 	display: flex;
-	width: 20%;
 	justify-content: space-evenly;
 	flex-direction: column;
-
+	width: 22%;
 	@media (min-width: ${DEVICES.TABLET}) {
 		flex-direction: row;
+		font-size: ${(props) => props.theme.fontSize.xlSmall};
+		width: 18%;
 	}
 	@media (min-width: ${DEVICES.LAPTOP}) {
-		font-size: ${(props) => props.theme.fontSize.small};
+		font-size: ${(props) => props.theme.fontSize.lSmall};
+		width: 15%;
+	}
+	@media (min-width: ${DEVICES.LARGE_SCREEN}) {
+		width: 12%;
 	}
 `
 
@@ -59,12 +64,45 @@ const LinkWrapper = styled.div`
 `
 
 const Icon = styled.img`
-	height: 2.6em;
+	height: 3.6em;
 	@media (min-width: ${DEVICES.PHONE}) {
 		height: 2.3em;
 	}
 	@media (min-width: ${DEVICES.TABLET}) {
 		display: none;
+	}
+`
+
+const LogoWrapper = styled.div`
+	flex: 1;
+	display: none;
+	@media (min-width: ${DEVICES.TABLET}) {
+		display: block;
+		margin-left: 1em;
+	}
+	@media (min-width: ${DEVICES.LARGE_SCREEN}) {
+		margin-left: 3em;
+	}
+`
+
+const Logo = styled.h1`
+	font-family: 'Lato', sans-serif;
+	width: fit-content;
+	font-weight: 900;
+	color: ${(props) => props.theme.primaryColor};
+	letter-spacing: ${(props) => props.theme.spacing.regular};
+	line-height: 1.3;
+	:hover {
+		color: ${(props) => props.theme.primaryMix};
+	}
+	@media (min-width: ${DEVICES.TABLET}) {
+		font-size: ${(props) => props.theme.fontSize.xSmall};
+	}
+	@media (min-width: ${DEVICES.LAPTOP}) {
+		font-size: ${(props) => props.theme.fontSize.lSmall};
+	}
+	@media (min-width: ${DEVICES.LARGE_SCREEN}) {
+		font-size: ${(props) => props.theme.fontSize.small};
 	}
 `
 
@@ -103,11 +141,14 @@ const Navigation = function ({ lang, theme, allRefs, toggleLanguage, toggleTheme
 
 	return (
 		<Nav>
-			<Settings>
-				<ConfigButton onClick={toggleLanguage}>{SETTINGS.LANGUAGE[lang]}</ConfigButton>
-				<ConfigButton onClick={toggleTheme}>{theme === MODE.DARK ? SETTINGS.MODE[lang].DARK : SETTINGS.MODE[lang].LIGHT}</ConfigButton>
-			</Settings>
-			<NavLinks>
+			<LogoWrapper>
+				<Link to={NAV_PAGES.HOME}>
+					<Logo>
+						Think <br /> Outside
+					</Logo>
+				</Link>
+			</LogoWrapper>
+			<NavLinks isSmall={lang === LANG.FR}>
 				<Link to={NAV_PAGES.HOME}>
 					<LinkWrapper>
 						<Icon src={Home} alt={`Icon of ${Home}`}></Icon>
@@ -143,6 +184,10 @@ const Navigation = function ({ lang, theme, allRefs, toggleLanguage, toggleTheme
 					</LinkWrapper>
 				</Link>
 			</NavLinks>
+			<Settings>
+				<ConfigButton onClick={toggleLanguage}>{SETTINGS.LANGUAGE[lang]}</ConfigButton>
+				<ConfigButton onClick={toggleTheme}>{theme === MODE.DARK ? SETTINGS.MODE[lang].DARK : SETTINGS.MODE[lang].LIGHT}</ConfigButton>
+			</Settings>
 		</Nav>
 	)
 }

@@ -21,15 +21,7 @@ export const Card = styled.div`
 		margin-bottom: 0;
 	}
 	width: 100%;
-	@media (min-width: ${DEVICES.OLD_PHONE}) {
-	}
-	@media (min-width: ${DEVICES.PHONE}) {
-	}
-	@media (min-width: ${DEVICES.TABLET}) {
-	}
-	@media (min-width: ${DEVICES.LAPTOP}) {
-		/* width: 35%; */
-	}
+
 	@media (min-width: ${DEVICES.LAPTOP}) {
 		width: 90%;
 	}

@@ -15,7 +15,6 @@ export const PrimaryLinkBtn = styled.a`
 	padding: 0.6em 1.2em;
 	font-size: ${(props) => props.theme.fontSize.xxSmall};
 	min-width: 6em;
-	/* max-width: 50%; */
 
 	:hover {
 		background-color: ${(props) => props.theme.primaryMix};
@@ -68,7 +67,6 @@ export const ConfigButton = styled.button`
 	background-color: transparent;
 	color: ${(props) => props.theme.light};
 	margin-top: 0.2em;
-	font-size: ${(props) => props.theme.fontSize.nano};
 	padding: 0.4em 0.1em;
 	border: 0.5px solid white;
 	text-transform: uppercase;
@@ -76,20 +74,15 @@ export const ConfigButton = styled.button`
 		font-weight: ${(props) => props.theme.fontWeight.strong};
 		transition: all 0.1s ease-in;
 	}
-	@media (min-width: ${DEVICES.PHONE}) {
-		font-size: ${(props) => props.theme.fontSize.xSmall};
-	}
 	@media (min-width: ${DEVICES.TABLET}) {
 		padding: 0.2em 0.7em;
 		margin-left: 0.5em;
-		font-size: ${(props) => props.theme.fontSize.small};
 		border: unset;
 		margin: unset;
 		padding: unset;
 	}
 	@media (min-width: ${DEVICES.LAPTOP}) {
 		max-width: 50%;
-		font-size: ${(props) => props.theme.fontSize.small};
 		letter-spacing: ${(props) => props.theme.spacing.large};
 	}
 `
@@ -100,24 +93,26 @@ export const NavLinks = styled.div`
 	align-items: center;
 	font-size: ${(props) => props.theme.fontSize.nano};
 	width: 80%;
-
+	height: 3vh;
 	@media (min-width: ${DEVICES.OLD_PHONE}) {
 		width: 80%;
 	}
 
 	@media (min-width: ${DEVICES.PHONE}) {
-		font-size: ${(props) => props.theme.fontSize.micro};
+		font-size: ${(props) => props.theme.fontSize.xxSmall};
 		width: 76%;
 	}
 	@media (min-width: ${DEVICES.TABLET}) {
-		font-size: ${(props) => props.theme.fontSize.small};
-		width: 75%;
+		border-right: ${(props) => `2px solid ${props.theme.light}`};
+		font-size: ${(props) => props.theme.fontSize.lSmall};
+		width: 72%;
 	}
 	@media (min-width: ${DEVICES.LAPTOP}) {
-		font-size: ${(props) => props.theme.fontSize.small};
+		font-size: ${(props) => props.theme.fontSize.mid};
 		width: 60%;
 	}
 	@media (min-width: ${DEVICES.LARGE_SCREEN}) {
+		font-size: ${(props) => props.theme.fontSize.mid};
 		width: 50%;
 	}
 	@media (min-width: ${DEVICES.BIG_SCREEN}) {
@@ -128,7 +123,6 @@ export const NavLinks = styled.div`
 export const NavLink = styled.span`
 	text-decoration: none;
 	border: unset;
-	font-size: ${(props) => props.theme.fontSize.small};
 	letter-spacing: ${(props) => props.theme.spacing.xSmall};
 	color: ${(props) => (props.special ? props.theme.primaryColor : props.current ? props.theme.primaryMix : props.theme.light)};
 	font-weight: ${(props) => (props.special ? props.theme.fontWeight.strong : props.theme.fontWeight.regular)};
