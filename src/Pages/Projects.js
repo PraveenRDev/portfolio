@@ -1,3 +1,4 @@
+import { forwardRef } from 'react'
 import styled from 'styled-components'
 import { SectionTitle } from '../Components/Title'
 import { FEATURED_PROJECT, TITLE, SUB_TITLE, PROJECTS } from '../Utils/Contents/Project'
@@ -6,7 +7,10 @@ import { LinkButton } from '../Components/Button'
 import Leafwire from '../Assets/Images/Leafwire.png'
 import Tag from '../Components/Tag'
 import { Card, CardContent, CardDescription, CardFooter, CardImage, CardSubTitle, CardTitle, FeaturedCard } from '../Components/Card'
-import { forwardRef } from 'react'
+
+import CaseStudy from '../Assets/Files/Case Study.pdf'
+import CaseStudyFR from '../Assets/Files/Étude de cas.pdf'
+import { LANG } from '../Utils/Constants'
 
 const ProjectSection = styled(YMarginContainer)``
 
@@ -61,6 +65,9 @@ const ProjectScreen = forwardRef(({ lang }, ref) => {
 					<CardFooter isOneLink={true}>
 						<LinkButton href={FEATURED_PROJECT.LINK} target='_blank' rel='noreferrer'>
 							Visit Website
+						</LinkButton>
+						<LinkButton href={lang === LANG.EN ? CaseStudy : CaseStudyFR} target='_blank' rel='noreferrer'>
+							{FEATURED_PROJECT.LINK_2[lang]}
 						</LinkButton>
 					</CardFooter>
 				</FeaturedCard>

@@ -50,6 +50,10 @@ export const FEATURED_PROJECT = {
 		'Slack',
 	],
 	LINK: 'https://www.leafwire.com',
+	LINK_2: {
+		english: 'View Case Study',
+		french: `Voir l'étude de cas`,
+	},
 }
 
 export const PROJECTS = [
